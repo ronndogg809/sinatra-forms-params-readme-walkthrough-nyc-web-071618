@@ -7,5 +7,12 @@ class App < Sinatra::Base
   end
 
   # Add your post route and action below
+    get '/' do
+      redirect "/food_form"
+    end
 
+
+  post '/food' do
+    "My name is #{params[:name]}, and I love #{params[:favorite_food]}"
+  end
 end
